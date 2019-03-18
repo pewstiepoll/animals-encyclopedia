@@ -21,7 +21,6 @@
 
 .wrapper {
     display: flex;
-    height: 200px;
     width: 100%;
 
     align-items: center;
@@ -34,9 +33,9 @@
 
 .sliderName {
     text-transform: uppercase;
-    padding: .6em 1em;
+    padding: .4em .8em;
 
-    font-size: 1.8em;
+    font-size: 1.5em;
 
     border: 2px solid rgb(255, 250, 50);
     border-radius: 50px;
@@ -45,9 +44,9 @@
 
 .sliderSeparator {
     height: 2px;
-    width: 200px;
+    width: 150px;
 
-    margin: 0 50px;
+    margin: 0 15px;
 
     background-color: rgb(255,250,50);
 }
@@ -58,10 +57,10 @@
 }
 
 .image {
-    width: 300px; 
-    height: 200px;
+    width: 210px; 
+    height: 130px;
 
-    margin: 0 15px;
+    margin: 0 10px;
 
     border: 1px solid rgba(255,250, 50, .5);
 }

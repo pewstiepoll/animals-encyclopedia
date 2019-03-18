@@ -1,7 +1,6 @@
 import React from "react";
-
 import ImageSlider from "./image-slider";
-
+import { makeImgUrl } from "./helpers";
 import styles from "./animal-page.module.css";
 
 function AnimalDescription ({scientificName, type}) {
@@ -28,18 +27,69 @@ function Header ({ animal }) {
     )
 }
 
-export default function AnimalPage ({ animal }) {
-    const [defaultBackground] = animal.images;
-    
+export default class AnimalPage extends React.Component {
+    constructor(props) {
+        super(props);
 
-    const defaultBackgroundPath = `${process.env.PUBLIC_URL}/images/${defaultBackground}`;
+        this.state = {
+            isLoading: true,
+            imageId: 0,
+            image: null
+        }
+    }
 
-    return (
-        <div className={styles.container} style={{ backgroundImage: `url(${defaultBackgroundPath })`}}>
-            <div className={styles.wrapper}>
-                <Header animal={animal} />
-                <ImageSlider name={animal.name} images={animal.images} />
+    _handleImageClick = (id) => {
+        const { animal } = this.props;
+        const { imageId : prevImageId, image: prevImage } = this.state;
+
+        if (id === prevImageId) return;
+
+        this.setState({ isLoading: true });
+
+        const image = new Image();
+        image.src = makeImgUrl(animal.images[id]) || prevImageId;
+
+        image.onload = () => {
+            this.setState({ isLoading: false, image: image.src, imageId: id });
+        }
+
+        image.onerror = () => {
+            this.setState({ isLoading: false, image: prevImage });
+        }
+    }
+
+    componentWillMount() {
+        const { animal } = this.props;
+        const { imageId } = this.state;
+
+        const defaultImageUrl = animal.images[imageId];
+
+        const image = new Image();
+
+        image.src = makeImgUrl(defaultImageUrl);
+
+        image.onload = () => {
+            this.setState({
+                isLoading: false,
+                image: image.src
+            });
+        };
+    }
+
+    render() {
+        const { animal } = this.props;
+        const { image, imageId, isLoading } = this.state;
+
+        const classes = [styles.backgroundImage, isLoading ? styles.backgroundImageLoading : styles.backgroundImageLoaded].join(" ");
+
+        return image && (
+            <div className={styles.container}>
+                <div className={styles.wrapper}>
+                    <Header animal={animal} />
+                    <ImageSlider current={imageId + 1} onImageClick={this._handleImageClick} name={animal.name} images={animal.images} />
+                </div>
+                <img className={classes} src={this.state.image} alt="background"/>
             </div>
-        </div>
-    )
+        )
+    }
 }

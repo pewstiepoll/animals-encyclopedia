@@ -2,7 +2,7 @@ import React from "react";
 
 import styles from "./image-slider.module.css";
 
-const makeImgUrl = (imgUrl) => `${process.env.PUBLIC_URL}/images/${imgUrl}`;
+import { makeImgUrl } from "./helpers";
 
 const SliderContext = React.createContext({ name: "", images: []});
 
@@ -41,49 +41,29 @@ const Images = withContext(SliderContext)(class Images extends React.Component {
         this.wrapperWidth = this.leftPosition = 0;
 
         this.state = {
-            left: 0
+            transition: 0
         };
     }
 
-    _scrollHandler = (e) => requestAnimationFrame(() => {
-        e.preventDefault();
-        const { deltaX } = e;
-
-        this.setState(({ left }) => {
-            const newLeft = left - deltaX;
-            
-            if (Math.abs(newLeft) > this.wrapperWidth - 330 || newLeft > 0) return null;
-
-            return { left: newLeft };
-        });
-    });
 
     render() {
-        const { name, images } = this.props;
-        const { left } = this.state;
+        const { name, images, onImageClick } = this.props;
 
         return (
-            <div className={styles.images} ref={this.wrapperRef} style={{ transform: `translateX(${left}px)`, overflow: "hidden" }}>
-                {images.map(image => <img key={image} className={styles.image} src={makeImgUrl(image)} alt={`${name} ${image}`} />)}
+            <div className={styles.images}>
+                {images.map((image, id) => <img key={image} onClick={() => onImageClick(id)} className={styles.image} src={makeImgUrl(image)} alt={`${name} ${image}`} />)}
             </div>
         );
-    }
-
-    componentWillUnmount() {
-    }
-
-    componentDidMount() {
-        const { width } = this.wrapperRef.current.getBoundingClientRect() || {};
-
-        this.wrapperWidth = width;
     }
 });
 
 export default function ImageSlider(props) {
+    const { current } = props;
+
     return (
         <div className={styles.container}>
             <SliderContext.Provider value={props}>
-                <ImageCounter current={1} />
+                <ImageCounter current={current} />
                 <div className={styles.wrapper}>
                     <SliderDetails />
                     <Images />
