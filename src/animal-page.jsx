@@ -40,9 +40,9 @@ export default class AnimalPage extends React.Component {
 
     _handleImageClick = (id) => {
         const { animal } = this.props;
-        const { imageId : prevImageId, image: prevImage } = this.state;
+        const { imageId : prevImageId, image: prevImage, isLoading } = this.state;
 
-        if (id === prevImageId) return;
+        if (id === prevImageId || isLoading) return;
 
         this.setState({ isLoading: true });
 

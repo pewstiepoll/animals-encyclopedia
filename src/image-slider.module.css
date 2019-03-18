@@ -52,8 +52,9 @@
 }
 
 .images {
-    display: flex;
-    min-width: 100%;
+    display: flex; 
+    min-width: 100%;   
+    overflow-x: scroll;
 }
 
 .image {
