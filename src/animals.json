@@ -1,0 +1,13 @@
+[
+    {
+        "name": "chameleon",
+        "scientific_name": "Chamaeleonidae",
+        "type": "Reptile",
+        "images": [
+            "chameleon1.jpg",
+            "chameleon2.jpg",
+            "chameleon3.jpg",
+            "chameleon4.jpg"
+        ]
+    }
+]
