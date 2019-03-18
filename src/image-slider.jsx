@@ -34,12 +34,49 @@ const SliderDetails = withContext(SliderContext)(function SliderDetails ({ name 
     );
 });
 
-const Images = withContext(SliderContext)(function Images ({ name, images }) {
-    return (
-        <div className={styles.images}>
-            {images.map(image => <img key={image} className={styles.image} src={makeImgUrl(image)} alt={`${name} ${image}`} />)}
-        </div>
-    );
+const Images = withContext(SliderContext)(class Images extends React.Component {
+    constructor(props, context) {
+        super(props, context);
+        this.wrapperRef = React.createRef();
+        this.wrapperWidth = this.leftPosition = 0;
+
+        this.state = {
+            left: 0
+        };
+    }
+
+    _scrollHandler = (e) => requestAnimationFrame(() => {
+        e.preventDefault();
+        const { deltaX } = e;
+
+        this.setState(({ left }) => {
+            const newLeft = left - deltaX;
+            
+            if (Math.abs(newLeft) > this.wrapperWidth - 330 || newLeft > 0) return null;
+
+            return { left: newLeft };
+        });
+    });
+
+    render() {
+        const { name, images } = this.props;
+        const { left } = this.state;
+
+        return (
+            <div className={styles.images} ref={this.wrapperRef} style={{ transform: `translateX(${left}px)`, overflow: "hidden" }}>
+                {images.map(image => <img key={image} className={styles.image} src={makeImgUrl(image)} alt={`${name} ${image}`} />)}
+            </div>
+        );
+    }
+
+    componentWillUnmount() {
+    }
+
+    componentDidMount() {
+        const { width } = this.wrapperRef.current.getBoundingClientRect() || {};
+
+        this.wrapperWidth = width;
+    }
 });
 
 export default function ImageSlider(props) {
