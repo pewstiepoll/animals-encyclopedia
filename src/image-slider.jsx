@@ -51,7 +51,7 @@ const Images = withContext(SliderContext)(class Images extends React.Component {
 
         return (
             <div className={styles.images}>
-                {images.map((image, id) => <img key={image.url} onClick={() => onImageClick(id)} className={styles.image} src={makeImgUrl(image.url)} alt={`${name} ${image.url}`} />)}
+                {images.map((image, id) => <img key={image.thumbnail} onClick={() => onImageClick(id)} className={styles.image} src={makeImgUrl(image.thumbnail)} alt={`${name} ${image.url}`} />)}
             </div>
         );
     }

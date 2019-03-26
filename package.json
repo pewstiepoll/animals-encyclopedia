@@ -11,7 +11,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "make:images": "gulp make:images"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -21,5 +22,11 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-responsive": "^2.13.0",
+    "sharp": "^0.21.3",
+    "walk": "^2.3.14"
+  }
 }
