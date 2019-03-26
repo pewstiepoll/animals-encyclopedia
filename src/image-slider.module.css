@@ -3,19 +3,19 @@
 }
 
 .counter {
-    font-size: 3em;
+    font-size: 7rem;
 }
 
 .counter span {
-    letter-spacing: 0.3em;
+    letter-spacing: 3rem;
 }
 
 .counterCurrent {
-    font-size: 1.5em;
+    font-size: 10rem;
 }
 
 .counterDelimiter {
-    font-size: .8em;
+    font-size: 4rem;
     font-weight: 500;
 }
 
@@ -33,9 +33,9 @@
 
 .sliderName {
     text-transform: uppercase;
-    padding: .4em .8em;
+    padding: 2rem 4rem;
 
-    font-size: 1.5em;
+    font-size: 3rem;
 
     border: 2px solid rgb(255, 250, 50);
     border-radius: 50px;
@@ -44,9 +44,9 @@
 
 .sliderSeparator {
     height: 2px;
-    width: 150px;
+    width: 15rem;
 
-    margin: 0 15px;
+    margin: 0 2rem;
 
     background-color: rgb(255,250,50);
 }
@@ -54,14 +54,15 @@
 .images {
     display: flex; 
     min-width: 100%;   
-    overflow-x: scroll;
 }
 
 .image {
-    width: 210px; 
-    height: 130px;
+    width: 27rem; 
+    height: 18rem;
 
-    margin: 0 10px;
+    flex-shrink: 0;
+
+    margin: 0 1.2rem;
 
     border: 1px solid rgba(255,250, 50, .5);
 }

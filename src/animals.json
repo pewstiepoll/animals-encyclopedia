@@ -4,10 +4,22 @@
         "scientific_name": "Chamaeleonidae",
         "type": "Reptile",
         "images": [
-            "chameleon1.jpg",
-            "chameleon2.jpg",
-            "chameleon3.jpg",
-            "chameleon4.jpg"
+            {
+                "url": "chameleon1.jpg",
+                "thumbnail": "thumbnails/chameleon1.thumb.webp"
+            },
+            {
+                "url": "chameleon2.jpg",
+                "thumbnail": "thumbnails/chameleon2.thumb.webp"
+            },
+            {
+                "url": "chameleon3.jpg",
+                "thumbnail": "thumbnails/chameleon3.thumb.webp"
+            },
+            {
+                "url": "chameleon4.jpg",
+                "thumbnail": "thumbnails/chameleon4.thumb.webp"
+            }
         ]
     }
 ]

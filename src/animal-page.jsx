@@ -47,7 +47,7 @@ export default class AnimalPage extends React.Component {
         this.setState({ isLoading: true });
 
         const image = new Image();
-        image.src = makeImgUrl(animal.images[id]) || prevImageId;
+        image.src = makeImgUrl(animal.images[id].url) || prevImageId;
 
         image.onload = () => {
             this.setState({ isLoading: false, image: image.src, imageId: id });
@@ -62,7 +62,7 @@ export default class AnimalPage extends React.Component {
         const { animal } = this.props;
         const { imageId } = this.state;
 
-        const defaultImageUrl = animal.images[imageId];
+        const defaultImageUrl = animal.images[imageId].url;
 
         const image = new Image();
 
