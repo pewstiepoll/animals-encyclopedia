@@ -25,5 +25,113 @@
         "fallback": "thumbnails/chameleon4.jpeg"
       }
     ]
+  },
+  {
+    "name": "frog",
+    "scientific_name": "Hyla",
+    "type": "Amphibian",
+    "images": [
+      {
+        "url": "tree-frog1.jpg",
+        "thumbnail": "thumbnails/tree-frog1.webp",
+        "fallback": "thumbnails/tree-frog1.jpeg"
+      },
+      {
+        "url": "tree-frog2.jpg",
+        "thumbnail": "thumbnails/tree-frog2.webp",
+        "fallback": "thumbnails/tree-frog2.jpeg"
+      },
+      {
+        "url": "tree-frog3.jpg",
+        "thumbnail": "thumbnails/tree-frog3.webp",
+        "fallback": "thumbnails/tree-frog3.jpeg"
+      },
+      {
+        "url": "tree-frog4.jpg",
+        "thumbnail": "thumbnails/tree-frog4.webp",
+        "fallback": "thumbnails/tree-frog4.jpeg"
+      }
+    ]
+  },
+  {
+    "name": "python",
+    "scientific_name": "Morelia viridis",
+    "type": "Reptile",
+    "images": [
+      {
+        "url": "python1.jpg",
+        "thumbnail": "thumbnails/python1.webp",
+        "fallback": "thumbnails/python1.jpeg"
+      },
+      {
+        "url": "python2.jpg",
+        "thumbnail": "thumbnails/python2.webp",
+        "fallback": "thumbnails/python2.jpeg"
+      },
+      {
+        "url": "python3.jpg",
+        "thumbnail": "thumbnails/python3.webp",
+        "fallback": "thumbnails/python3.jpeg"
+      },
+      {
+        "url": "python4.jpg",
+        "thumbnail": "thumbnails/python4.webp",
+        "fallback": "thumbnails/python4.jpeg"
+      }
+    ]
+  },
+  {
+    "name": "toucan",
+    "scientific_name": "Ramphastos Sulfuratus",
+    "type": "Bird",
+    "images": [
+      {
+        "url": "toucan1.jpg",
+        "thumbnail": "thumbnails/toucan1.webp",
+        "fallback": "thumbnails/toucan1.jpeg"
+      },
+      {
+        "url": "toucan2.jpg",
+        "thumbnail": "thumbnails/toucan2.webp",
+        "fallback": "thumbnails/toucan2.jpeg"
+      },
+      {
+        "url": "toucan3.jpg",
+        "thumbnail": "thumbnails/toucan3.webp",
+        "fallback": "thumbnails/toucan3.jpeg"
+      },
+      {
+        "url": "toucan4.jpg",
+        "thumbnail": "thumbnails/toucan4.webp",
+        "fallback": "thumbnails/toucan4.jpeg"
+      }
+    ]
+  },
+  {
+    "name": "gecko",
+    "scientific_name": "Gekkonidae",
+    "type": "Reptile",
+    "images": [
+      {
+        "url": "gecko1.jpg",
+        "thumbnail": "thumbnails/gecko1.webp",
+        "fallback": "thumbnails/gecko1.jpeg"
+      },
+      {
+        "url": "gecko2.jpg",
+        "thumbnail": "thumbnails/gecko2.webp",
+        "fallback": "thumbnails/gecko2.jpeg"
+      },
+      {
+        "url": "gecko3.jpg",
+        "thumbnail": "thumbnails/gecko3.webp",
+        "fallback": "thumbnails/gecko3.jpeg"
+      },
+      {
+        "url": "gecko4.jpg",
+        "thumbnail": "thumbnails/gecko4.webp",
+        "fallback": "thumbnails/gecko4.jpeg"
+      }
+    ]
   }
 ]
