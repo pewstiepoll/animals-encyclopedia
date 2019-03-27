@@ -1,4 +1,6 @@
 import React from "react";
+import PropTypes from "prop-types";
+
 import ImageSlider from "./image-slider";
 import { makeImgUrl } from "./helpers";
 import styles from "./animal-page.module.css";
@@ -46,9 +48,7 @@ export default class AnimalPage extends React.Component {
     image.src = makeImgUrl(animal.images[id].url) || prevImageId;
 
     image.onload = () => {
-      setTimeout(() => {
-        this.setState({ isLoading: false, image: image.src, imageId: id });
-      }, 2000);
+      this.setState({ isLoading: false, image: image.src, imageId: id });
     };
 
     image.onerror = () => {
@@ -101,3 +101,21 @@ export default class AnimalPage extends React.Component {
     );
   }
 }
+
+AnimalPage.defaultProps = {
+  animal: {
+    name: "no-name",
+    scientific_name: "no-sci-name",
+    type: "no-type",
+    images: []
+  }
+};
+
+AnimalPage.propTypes = {
+  animal: PropTypes.shape({
+    name: PropTypes.string,
+    scientific_name: PropTypes.string,
+    type: PropTypes.string,
+    images: PropTypes.array
+  })
+};
