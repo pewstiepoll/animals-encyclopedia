@@ -4,6 +4,10 @@
   height: 100%;
 }
 
+.container {
+  position: relative;
+}
+
 .wrapper {
   padding: 12rem 0 8rem 12rem;
   display: flex;
