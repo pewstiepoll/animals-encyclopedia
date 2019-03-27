@@ -1,68 +1,71 @@
 .container {
-    color: #fff;
+  color: #fff;
 }
 
 .counter {
-    font-size: 7rem;
+  font-size: 7rem;
 }
 
 .counter span {
-    letter-spacing: 3rem;
+  letter-spacing: 3rem;
 }
 
 .counterCurrent {
-    font-size: 10rem;
+  font-size: 10rem;
 }
 
 .counterDelimiter {
-    font-size: 4rem;
-    font-weight: 500;
+  font-size: 4rem;
+  font-weight: 500;
 }
 
 .wrapper {
-    display: flex;
-    width: 100%;
+  display: flex;
+  width: 100%;
 
-    align-items: center;
+  align-items: center;
 }
 
 .sliderDetails {
-    display: flex; 
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .sliderName {
-    text-transform: uppercase;
-    padding: 2rem 4rem;
+  text-transform: uppercase;
+  padding: 2rem 4rem;
 
-    font-size: 3rem;
+  font-size: 3rem;
 
-    border: 2px solid rgb(255, 250, 50);
-    border-radius: 50px;
-    position: relative;
+  border: 2px solid rgb(255, 250, 50);
+  border-radius: 50px;
+  position: relative;
+
+  min-width: 27rem;
+  text-align: center;
 }
 
 .sliderSeparator {
-    height: 2px;
-    width: 15rem;
+  height: 2px;
+  width: 15rem;
 
-    margin: 0 2rem;
+  margin: 0 2rem;
 
-    background-color: rgb(255,250,50);
+  background-color: rgb(255, 250, 50);
 }
 
 .images {
-    display: flex; 
-    min-width: 100%;   
+  display: flex;
+  min-width: 100%;
 }
 
 .image {
-    width: 27rem; 
-    height: 18rem;
+  width: 27rem;
+  height: 18rem;
 
-    flex-shrink: 0;
+  flex-shrink: 0;
 
-    margin: 0 1.2rem;
+  margin: 0 1.2rem;
 
-    border: 1px solid rgba(255,250, 50, .5);
+  border: 1px solid rgba(255, 250, 50, 0.5);
 }
