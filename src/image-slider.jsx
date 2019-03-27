@@ -38,8 +38,8 @@ const SliderDetails = withContext(SliderContext)(function SliderDetails({
 
 const Img = ({ webp, fallback, alt, ...rest }) => (
   <picture>
-    <source srcset={webp} type="image/webp" />
-    <source srcset={fallback} type="image/jpeg" />
+    <source srcSet={webp} type="image/webp" />
+    <source srcSet={fallback} type="image/jpeg" />
     <img {...rest} src={fallback} alt={alt} />
   </picture>
 );
