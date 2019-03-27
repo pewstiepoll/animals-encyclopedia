@@ -4,9 +4,9 @@
   "private": true,
   "homepage": "https://animals-encyclopedia.surge.sh/",
   "dependencies": {
+    "prop-types": "^15.7.2",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
-    "react-router-dom": "^5.0.0",
     "react-scripts": "2.1.8"
   },
   "scripts": {
@@ -28,7 +28,6 @@
   "devDependencies": {
     "gulp": "^4.0.0",
     "gulp-responsive": "^2.13.0",
-    "sharp": "^0.21.3",
-    "walk": "^2.3.14"
+    "sharp": "^0.21.3"
   }
 }
