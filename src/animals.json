@@ -1,25 +1,29 @@
 [
-    {
-        "name": "chameleon",
-        "scientific_name": "Chamaeleonidae",
-        "type": "Reptile",
-        "images": [
-            {
-                "url": "chameleon1.jpg",
-                "thumbnail": "chameleon1.thumb.webp"
-            },
-            {
-                "url": "chameleon2.jpg",
-                "thumbnail": "chameleon2.thumb.webp"
-            },
-            {
-                "url": "chameleon3.jpg",
-                "thumbnail": "chameleon3.thumb.webp"
-            },
-            {
-                "url": "chameleon4.jpg",
-                "thumbnail": "chameleon4.thumb.webp"
-            }
-        ]
-    }
+  {
+    "name": "chameleon",
+    "scientific_name": "Chamaeleonidae",
+    "type": "Reptile",
+    "images": [
+      {
+        "url": "chameleon1.jpg",
+        "thumbnail": "thumbnails/chameleon1.webp",
+        "fallback": "thumbnails/chameleon1.jpeg"
+      },
+      {
+        "url": "chameleon2.jpg",
+        "thumbnail": "thumbnails/chameleon2.webp",
+        "fallback": "thumbnails/chameleon2.jpeg"
+      },
+      {
+        "url": "chameleon3.jpg",
+        "thumbnail": "thumbnails/chameleon3.webp",
+        "fallback": "thumbnails/chameleon3.jpeg"
+      },
+      {
+        "url": "chameleon4.jpg",
+        "thumbnail": "thumbnails/chameleon4.webp",
+        "fallback": "thumbnails/chameleon4.jpeg"
+      }
+    ]
+  }
 ]

@@ -3,10 +3,9 @@ const sharp = require("gulp-responsive");
 const path = require("path");
 
 const IMAGES_FOLDER_URL = path.resolve("public", "images");
+const THUMBNAILS_FOLDER_URL = path.resolve("public", "images", "thumbnails");
 
-console.log("path: ", IMAGES_FOLDER_URL);
-
-gulp.task("make:images", () => {
+function thumbnailsWebp() {
     return gulp
             .src(`${IMAGES_FOLDER_URL}/*.jpg`)
             .pipe(
@@ -14,10 +13,25 @@ gulp.task("make:images", () => {
                     "*.jpg": { 
                         quality: 100, 
                         width: 300,
-                        format: "webp",
-                        rename: { suffix: ".thumb" }
-                    } 
+                        format: "webp"
+                    }
                 })
             )
-            .pipe(gulp.dest(IMAGES_FOLDER_URL));
-})
+            .pipe(gulp.dest(THUMBNAILS_FOLDER_URL));
+};
+
+function thumbnailsJpeg () {
+    return gulp
+            .src(`${IMAGES_FOLDER_URL}/*.jpg`)
+            .pipe(
+                sharp({ 
+                    "*.jpg": { 
+                        quality: 100, 
+                        width: 300
+                    }
+                })
+            )
+            .pipe(gulp.dest(THUMBNAILS_FOLDER_URL));
+};
+
+exports.default = gulp.parallel([thumbnailsWebp, thumbnailsJpeg]);
