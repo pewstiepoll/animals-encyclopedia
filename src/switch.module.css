@@ -1,0 +1,58 @@
+.switch-wrapper {
+  display: inline-flex;
+  flex-direction: row-reverse;
+  width: 160px;
+  overflow: hidden;
+
+  position: absolute;
+
+  z-index: 2;
+
+  transform: rotate(-90deg);
+
+  top: 23rem;
+  right: 15rem;
+}
+
+.switch-wrapper::after {
+  content: "";
+  position: absolute;
+
+  width: 50px;
+  height: 2px;
+
+  background-color: #555;
+}
+
+.switch-container {
+  display: inline-flex;
+  flex-direction: row-reverse;
+
+  will-change: transform;
+
+  transition: transform 1s;
+
+  color: #fff;
+}
+
+.switch-item {
+  font-size: 8rem;
+  font-weight: 900;
+  line-height: 1em;
+  width: 45px;
+
+  margin-left: 50px;
+
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+
+  will-change: font-size;
+
+  transition: font-size 0.75s ease-out;
+}
+
+.switch-item--active {
+  font-size: 3rem;
+}

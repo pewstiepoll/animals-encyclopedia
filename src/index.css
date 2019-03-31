@@ -34,3 +34,12 @@ body {
 h1 {
   margin: 0;
 }
+
+.switch-controls {
+  z-index: 2;
+  position: absolute;
+  right: 12rem;
+  top: 32rem;
+
+  transform: rotate(-90deg);
+}

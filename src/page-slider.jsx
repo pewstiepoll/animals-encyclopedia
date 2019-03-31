@@ -1,6 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 
+import { SwitchObserver } from "./switch";
+
 export function Page({ children }) {
   return <div style={{ width: "100%", height: "100%" }}>{children}</div>;
 }
@@ -13,7 +15,7 @@ Page.propTypes = {
   children: PropTypes.node
 };
 
-export function Slider({ size, children }) {
+export function Slider({ size, children, effectCreator }) {
   const [transition, setTransition] = React.useState(0);
 
   const canMove = {
@@ -36,6 +38,12 @@ export function Slider({ size, children }) {
     }
   };
 
+  // get effect from creator function only if one is provided
+  typeof effectCreator === "function" &&
+    React.useEffect(() =>
+      effectCreator({ next: params.next, prev: params.prev })
+    );
+
   return children(params);
 }
 
@@ -49,37 +57,65 @@ Slider.propTypes = {
   children: PropTypes.func
 };
 
-export function PageSlider({ pages }) {
-  return (
-    <div style={{ width: "100%", height: "100%" }} className="page-slider">
-      <Slider size={pages.length - 1}>
-        {({ transition }) => {
-          const style = {
-            width: "100%",
-            height: "100%",
-            transform: `translateY(${transition * 100}%)`,
-            transition: `transform 1s`
-          };
+export class PageSlider extends React.Component {
+  render() {
+    const { pages } = this.props;
 
-          return (
-            <React.Fragment>
-              <div style={style}>
-                {pages.map((page, id) => (
-                  <Page key={id}>{page}</Page>
-                ))}
-              </div>
-            </React.Fragment>
-          );
-        }}
-      </Slider>
-    </div>
-  );
+    return (
+      <div style={{ width: "100%", height: "100%" }} className="page-slider">
+        <Slider
+          effectCreator={({ next, prev }) => {
+            const subscriptionCallback = eventType => {
+              switch (eventType) {
+                case SwitchObserver.eventTypes.next:
+                  next();
+                  break;
+                case SwitchObserver.eventTypes.prev:
+                  prev();
+                  break;
+                default:
+                  break;
+              }
+            };
+
+            SwitchObserver.subscribe(subscriptionCallback);
+
+            return () => {
+              SwitchObserver.unsubscibe(subscriptionCallback);
+            };
+          }}
+          size={pages.length - 1}
+        >
+          {({ transition }) => {
+            const style = {
+              width: "100%",
+              height: "100%",
+              transform: `translateY(${transition * 100}%)`,
+              transition: `transform 1s`
+            };
+
+            return (
+              <React.Fragment>
+                <div style={style}>
+                  {pages.map((page, id) => (
+                    <Page key={id}>{page}</Page>
+                  ))}
+                </div>
+              </React.Fragment>
+            );
+          }}
+        </Slider>
+      </div>
+    );
+  }
 }
 
 PageSlider.defaultProps = {
-  pages: []
+  pages: [],
+  onStateChange: () => {}
 };
 
 PageSlider.propTypes = {
-  pages: PropTypes.array
+  pages: PropTypes.array,
+  onStateChange: PropTypes.func
 };
