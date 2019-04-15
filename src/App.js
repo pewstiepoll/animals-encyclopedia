@@ -25,7 +25,7 @@ class App extends Component {
             <SwitchControls onNext={next} onPrev={prev} />
           )}
           initial={1}
-          length={animalPages.length - 1}
+          length={animalPages.length}
         />
         <PageSlider pages={animalPages} />
       </div>
