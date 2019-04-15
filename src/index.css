@@ -40,6 +40,27 @@ h1 {
   position: absolute;
   right: 12rem;
   top: 32rem;
+  width: 5.5rem;
+
+  display: flex;
+  justify-content: space-between;
 
   transform: rotate(-90deg);
+}
+
+.switch-controls button {
+  outline: none;
+  background: none;
+  border: none;
+  border-radius: 50px;
+
+  width: 2.5rem;
+  height: 2.5rem;
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgba(0, 0, 0, 0.2);
+  color: #fff;
 }
