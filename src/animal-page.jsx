@@ -64,6 +64,7 @@ export default class AnimalPage extends React.Component {
 
     const image = new Image();
 
+    console.log("imageLink: ", makeImgUrl(defaultImageUrl));
     image.src = makeImgUrl(defaultImageUrl);
 
     image.onload = () => {

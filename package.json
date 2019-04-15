@@ -14,7 +14,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "images": "gulp"
+    "images": "gulp",
+    "images:normalize": "gulp normalize"
   },
   "eslintConfig": {
     "extends": "react-app"

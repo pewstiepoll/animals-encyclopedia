@@ -5,22 +5,22 @@
     "type": "Reptile",
     "images": [
       {
-        "url": "chameleon1.jpg",
+        "url": "normalized/chameleon1.jpeg",
         "thumbnail": "thumbnails/chameleon1.webp",
         "fallback": "thumbnails/chameleon1.jpeg"
       },
       {
-        "url": "chameleon2.jpg",
+        "url": "normalized/chameleon2.jpeg",
         "thumbnail": "thumbnails/chameleon2.webp",
         "fallback": "thumbnails/chameleon2.jpeg"
       },
       {
-        "url": "chameleon3.jpg",
+        "url": "normalized/chameleon3.jpeg",
         "thumbnail": "thumbnails/chameleon3.webp",
         "fallback": "thumbnails/chameleon3.jpeg"
       },
       {
-        "url": "chameleon4.jpg",
+        "url": "normalized/chameleon4.jpeg",
         "thumbnail": "thumbnails/chameleon4.webp",
         "fallback": "thumbnails/chameleon4.jpeg"
       }
@@ -32,22 +32,22 @@
     "type": "Amphibian",
     "images": [
       {
-        "url": "tree-frog1.jpg",
+        "url": "normalized/tree-frog1.jpeg",
         "thumbnail": "thumbnails/tree-frog1.webp",
         "fallback": "thumbnails/tree-frog1.jpeg"
       },
       {
-        "url": "tree-frog2.jpg",
+        "url": "normalized/tree-frog2.jpeg",
         "thumbnail": "thumbnails/tree-frog2.webp",
         "fallback": "thumbnails/tree-frog2.jpeg"
       },
       {
-        "url": "tree-frog3.jpg",
+        "url": "normalized/tree-frog3.jpeg",
         "thumbnail": "thumbnails/tree-frog3.webp",
         "fallback": "thumbnails/tree-frog3.jpeg"
       },
       {
-        "url": "tree-frog4.jpg",
+        "url": "normalized/tree-frog4.jpeg",
         "thumbnail": "thumbnails/tree-frog4.webp",
         "fallback": "thumbnails/tree-frog4.jpeg"
       }
@@ -59,22 +59,22 @@
     "type": "Reptile",
     "images": [
       {
-        "url": "python1.jpg",
+        "url": "normalized/python1.jpeg",
         "thumbnail": "thumbnails/python1.webp",
         "fallback": "thumbnails/python1.jpeg"
       },
       {
-        "url": "python2.jpg",
+        "url": "normalized/python2.jpeg",
         "thumbnail": "thumbnails/python2.webp",
         "fallback": "thumbnails/python2.jpeg"
       },
       {
-        "url": "python3.jpg",
+        "url": "normalized/python3.jpeg",
         "thumbnail": "thumbnails/python3.webp",
         "fallback": "thumbnails/python3.jpeg"
       },
       {
-        "url": "python4.jpg",
+        "url": "normalized/python4.jpeg",
         "thumbnail": "thumbnails/python4.webp",
         "fallback": "thumbnails/python4.jpeg"
       }
@@ -86,22 +86,22 @@
     "type": "Bird",
     "images": [
       {
-        "url": "toucan1.jpg",
+        "url": "normalized/toucan1.jpeg",
         "thumbnail": "thumbnails/toucan1.webp",
         "fallback": "thumbnails/toucan1.jpeg"
       },
       {
-        "url": "toucan2.jpg",
+        "url": "normalized/toucan2.jpeg",
         "thumbnail": "thumbnails/toucan2.webp",
         "fallback": "thumbnails/toucan2.jpeg"
       },
       {
-        "url": "toucan3.jpg",
+        "url": "normalized/toucan3.jpeg",
         "thumbnail": "thumbnails/toucan3.webp",
         "fallback": "thumbnails/toucan3.jpeg"
       },
       {
-        "url": "toucan4.jpg",
+        "url": "normalized/toucan4.jpeg",
         "thumbnail": "thumbnails/toucan4.webp",
         "fallback": "thumbnails/toucan4.jpeg"
       }
@@ -113,22 +113,22 @@
     "type": "Reptile",
     "images": [
       {
-        "url": "gecko1.jpg",
+        "url": "normalized/gecko1.jpeg",
         "thumbnail": "thumbnails/gecko1.webp",
         "fallback": "thumbnails/gecko1.jpeg"
       },
       {
-        "url": "gecko2.jpg",
+        "url": "normalized/gecko2.jpeg",
         "thumbnail": "thumbnails/gecko2.webp",
         "fallback": "thumbnails/gecko2.jpeg"
       },
       {
-        "url": "gecko3.jpg",
+        "url": "normalized/gecko3.jpeg",
         "thumbnail": "thumbnails/gecko3.webp",
         "fallback": "thumbnails/gecko3.jpeg"
       },
       {
-        "url": "gecko4.jpg",
+        "url": "normalized/gecko4.jpeg",
         "thumbnail": "thumbnails/gecko4.webp",
         "fallback": "thumbnails/gecko4.jpeg"
       }
